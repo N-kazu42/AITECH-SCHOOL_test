@@ -1,0 +1,108 @@
+body {
+    font-family: "Noto Sans JP", sans-serif;
+}
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+section {
+    padding: 4rem 0;
+}
+button {
+    border: none;
+    background: none;
+}
+header {
+    background: url(../images/header-back.jpg) no-repeat top center;
+    height: 50vh;
+    background-size: cover;
+    h1 {
+        position: absolute;
+        left: 0;
+        top: 0;
+        padding-left: 12px;
+    }
+    .header-box {
+        position: relative;
+    }
+}
+.header-box__contents {
+    display: flex;
+    height: 50vh;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    width: 70%;
+    button {
+        margin: 1rem auto;
+    }
+}
+@media screen and (max-width: 768px) {
+
+}
+
+@media screen and (max-width: 768px) {
+    header {
+        background: url(../images/header-back.jpg) no-repeat top left;
+    }
+    .header-box__contents {
+        height: 50vh;
+        width: 100%;
+    }
+}
+
+// .problemコンテンツ
+.problem-box {
+    h1 {
+        text-align: center;
+    }
+    &__contents {
+        padding-top: 2rem;
+        display: flex;
+        justify-content: center;
+        &--img {
+            flex-basis: 40%;
+            height: 30vh;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+        }
+        &--list {
+            flex-basis: 60%;
+            height: 30vh;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            li {
+                font-size: 18px;
+            }
+            i {
+                font-size: 22px;
+                color: #afd4d4;
+                margin: 0 0.5rem 0.5rem 0;
+            }
+        }
+    }
+}
+@media screen and (max-width: 768px) {
+    .problem-box {
+        h1 {
+            text-align: center;
+        }
+        &__contents {
+            flex-wrap: wrap;
+
+            &--img {
+                flex-basis: 100%;
+                order: 2;
+                justify-content: center;
+            }
+            &--list {
+                flex-basis: 100%;
+                order: 1;
+            }
+        }
+    }
+}
